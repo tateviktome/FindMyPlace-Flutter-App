@@ -98,7 +98,7 @@ class _HomePageState extends State<HomePage> {
         converter: (store) => store.state,
         builder: (_, state) {
           return ListView.separated(
-            padding: EdgeInsets.symmetric(horizontal: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 10),
             itemCount: state.places.length,
             separatorBuilder: (BuildContext context, int index) =>
                 const Divider(color: Colors.transparent),
@@ -106,7 +106,7 @@ class _HomePageState extends State<HomePage> {
               return ListTile(
                 shape: BeveledRectangleBorder(
                   side: BorderSide(
-                    color: Colors.black.withAlpha(30),
+                    color: Colors.black.withAlpha(10),
                   ),
                 ),
                 title: Text(state.places[index].name),
